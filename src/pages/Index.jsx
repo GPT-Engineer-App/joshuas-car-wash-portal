@@ -1,5 +1,6 @@
 import { Container, Box, VStack, HStack, Text, Button, Image, IconButton, Heading, Stack, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { FaSun, FaMoon, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
@@ -17,13 +18,13 @@ const Index = () => {
         </Text>
         <Image src="https://images.unsplash.com/photo-1565689876697-e467b6c54da2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjYXIlMjB3YXNofGVufDB8fHx8MTcxNjQ5MDI1NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Car Wash" borderRadius="md" mb={6} />
         <VStack spacing={4}>
-          <Button colorScheme="teal" size="lg">
+          <Button as={Link} to="/book-wash" colorScheme="teal" size="lg">
             Book a Wash
           </Button>
-          <Button colorScheme="blue" size="lg">
+          <Button as={Link} to="/services" colorScheme="blue" size="lg">
             Our Services
           </Button>
-          <Button colorScheme="purple" size="lg">
+          <Button as={Link} to="/contact" colorScheme="purple" size="lg">
             Contact Us
           </Button>
         </VStack>
@@ -61,7 +62,7 @@ const Index = () => {
         </HStack>
       </Box>
       <Box textAlign="center" py={10} px={6}>
-        <Text fontSize="sm">© 2023 Joshua's Car Wash. All rights reserved.</Text>
+        <Text fontSize="sm">© 2024 Joshua's Car Wash. All rights reserved.</Text>
       </Box>
     </Container>
   );
